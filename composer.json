@@ -2,7 +2,8 @@
   "name": "magenest/module-product-feed",
   "description": "Product Feed module for Magento 2 by Magenest",
   "require": {
-    "magenest/core": "*"
+    "magenest/core": "*",
+    "liquid/liquid": "*"
   },
   "type": "magento2-module",
   "version": "1.0.0",
