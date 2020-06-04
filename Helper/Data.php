@@ -302,10 +302,12 @@ class Data extends AbstractHelperAlias
                 }
                 $catPaths = array_reverse(explode(',', $cat->getPathInStore()));
                 foreach ($catPaths as $index => $catId) {
-                    if ($index == (count($catPaths) - 1)) {
-                        $categoryPath .= $categoriesName[$catId];
-                    } else {
-                        $categoryPath .= $categoriesName[$catId] . ' > ';
+                    if (isset($categoriesName[$catId])) {
+                        if ($index == (count($catPaths) - 1)) {
+                            $categoryPath .= $categoriesName[$catId];
+                        } else {
+                            $categoryPath .= $categoriesName[$catId] . ' > ';
+                        }
                     }
                 }
             }
